@@ -1,4 +1,5 @@
 extends Area2D
+signal hit
 
 
 # Declare member variables here. Examples:
@@ -42,3 +43,7 @@ func _process(delta):
 	elif velocity.y != 0:
 		$AnimatedSprite.animation = "up"
 		$AnimatedSprite.flip_v = velocity.y > 0
+
+
+func _on_Player_body_entered(body):
+	pass # Replace with function body.
